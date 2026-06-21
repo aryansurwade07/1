@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair.com Unisex Salon — Premium Grooming Sanctuary</title>
+
+    <!-- SEO & Schema -->
+    <meta name="description" content="Experience 4.9-star premium unisex grooming at Hair.com Salon. Expert stylists, relaxing ambiance, and top-tier services in Dombivli." />
+    <link rel="canonical" href="https://haircomsalon.com" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ====================================================
+                   RESET & BASE
+                   ==================================================== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --charcoal: #1A1A1A;
+            --warm-black: #222222;
+            --greige: #EAE6DF;
+            --soft-white: #F8F7F4;
+            --gold: #C9A96E;
+            --gold-light: #E4D5A8;
+            --terracotta: #D48C70;
+            --text-dark: #2A2D34;
+            --text-light: #F0EEEB;
+            --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 30px 80px rgba(0, 0, 0, 0.15);
+            --radius: 16px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--soft-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-sub {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 560px;
+            font-weight: 300;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ====================================================
+                   BUTTONS
+                   ==================================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            background: var(--charcoal);
+            color: white;
+            box-shadow: 0 4px 20px rgba(26, 26, 26, 0.15);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(26, 26, 26, 0.25);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            color: var(--charcoal);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--charcoal);
+            color: var(--charcoal);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--charcoal);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-light {
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ====================================================
+                   NAVIGATION
+                   ==================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(26, 26, 26, 0.92);
+            backdrop-filter: blur(16px);
+            padding: 12px 0;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links .btn-nav {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .nav-links .btn-nav:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+        .nav-links .btn-nav::after {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: white;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ====================================================
+                   HERO
+                   ==================================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--charcoal);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(212, 140, 112, 0.10) 0%, transparent 50%),
+                var(--charcoal);
+            z-index: 1;
+        }
+
+        /* 3D Floating Elements */
+        .floating-3d {
+            position: absolute;
+            z-index: 2;
+            opacity: 0.06;
+            font-size: 12rem;
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-3d:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        .floating-3d:nth-child(2) {
+            bottom: 15%;
+            right: 8%;
+            animation-delay: 2s;
+            font-size: 8rem;
+        }
+        .floating-3d:nth-child(3) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 4s;
+            font-size: 16rem;
+            opacity: 0.03;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(6deg);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            padding: 40px 0;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            padding: 8px 20px 8px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 28px;
+        }
+
+        .hero-badge i {
+            color: var(--gold);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 8vw, 4.8rem);
+            color: white;
+            line-height: 1.08;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 480px;
+            font-weight: 300;
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .hero-stats .stat {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        .hero-stats .stat strong {
+            display: block;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* ====================================================
+                   FEATURES (The Experience)
+                   ==================================================== */
+        .features {
+            background: white;
+            border-bottom: 1px solid #f0ede8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            background: var(--soft-white);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold-light);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .feature-card .icon {
+            font-size: 2.4rem;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* ====================================================
+                   GALLERY / GLIMPSE INSIDE
+                   ==================================================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .gallery-grid .gallery-item {
+            aspect-ratio: 1 / 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #ddd;
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .gallery-grid .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item .placeholder-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.4);
+            background: linear-gradient(145deg, #3a3a3a, #222);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* ====================================================
+                   SERVICES
+                   ==================================================== */
+        #services {
+            background: var(--soft-white);
+        }
+
+        .services-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .service-category {
+            background: white;
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            box-shadow: var(--shadow-soft);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            text-align: center;
+        }
+
+        .service-category:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .service-category .cat-icon {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .service-category h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .service-category .count {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Service Modal / Detail Panel */
+        .service-detail-panel {
+            margin-top: 40px;
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            display: none;
+            animation: fadeUp 0.5s ease;
+        }
+
+        .service-detail-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-detail-panel .panel-title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .service-detail-panel .panel-sub {
+            color: #888;
+            margin-bottom: 24px;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .service-list .service-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: var(--soft-white);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        .service-list .service-item i {
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        .service-cta {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ====================================================
+                   ABOUT
+                   ==================================================== */
+        #about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 5rem;
+        }
+
+        .about-text .lead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin: 16px 0 24px;
+            line-height: 1.8;
+        }
+
+        .about-text .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-top: 16px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e0dcd5, #c9c4bb);
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #888;
+            font-weight: 300;
+        }
+
+        .team-member h5 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .team-member .role {
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ====================================================
+                   VISIT US
+                   ==================================================== */
+        #visit {
+            background: var(--soft-white);
+        }
+
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 32px;
+        }
+
+        .visit-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .visit-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .visit-card .detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        .visit-card .detail i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            width: 24px;
+            margin-top: 2px;
+        }
+
+        .map-placeholder {
+            background: #ddd;
+            border-radius: var(--radius);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 16px;
+        }
+
+        .visit-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        /* ====================================================
+                   INSTAGRAM FEED
+                   ==================================================== */
+        .instagram-feed {
+            background: white;
+            padding: 60px 0;
+            border-top: 1px solid #f0ede8;
+            border-bottom: 1px solid #f0ede8;
+        }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .insta-grid .insta-item {
+            aspect-ratio: 1/1;
+            background: linear-gradient(145deg, #e8e4dd, #d5d0c9);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .insta-grid .insta-item:hover {
+            transform: scale(1.04);
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* ====================================================
+                   FOOTER
+                   ==================================================== */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 48px 0 32px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: white;
+            margin-bottom: 8px;
+        }
+        footer .brand span {
+            color: var(--gold);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        footer h5 {
+            font-family: 'Inter', sans-serif;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+        footer ul li {
+            margin-bottom: 8px;
+        }
+        footer ul a {
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        footer ul a:hover {
+            color: white;
+        }
+
+        footer .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        footer .social-links a {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.4);
+            transition: var(--transition);
+        }
+        footer .social-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            grid-column: 1 / -1;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ====================================================
+                   RESPONSIVE
+                   ==================================================== */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .visit-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-item:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            footer .container {
+                grid-template-columns: 1fr 1fr;
+            }
+            .insta-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(26, 26, 26, 0.96);
+                backdrop-filter: blur(16px);
+                padding: 32px 24px;
+                border-radius: 0 0 var(--radius) var(--radius);
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            .services-categories {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+
+            footer .container {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .insta-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .section-padding {
+                padding: 56px 0;
+            }
+
+            .service-detail-panel {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-categories {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+        }
+
+        /* ====================================================
+                   UTILITIES
+                   ==================================================== */
+        .gap-8 {
+            gap: 8px;
+        }
+        .mt-8 {
+            margin-top: 8px;
+        }
+        .mt-16 {
+            margin-top: 16px;
+        }
+        .mt-24 {
+            margin-top: 24px;
+        }
+        .mt-32 {
+            margin-top: 32px;
+        }
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+        .mb-16 {
+            margin-bottom: 16px;
+        }
+        .mb-24 {
+            margin-bottom: 24px;
+        }
+        .text-gold {
+            color: var(--gold);
+        }
+        .text-muted {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">hair.<span>com</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#visit">Visit Us</a></li>
+                <li><a href="#services" class="btn-nav"><i class="fas fa-calendar-check"></i> Book Now</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="floating-3d">✦</div>
+        <div class="floating-3d">✧</div>
+        <div class="floating-3d">✧</div>
+
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> 4.9 ★ (189 reviews)
+                <span style="margin:0 8px;opacity:0.3;">|</span>
+                <i class="far fa-clock"></i> Open until 11 PM
+            </div>
+
+            <h1>Your Style. <br /><em>Our Sanctuary.</em></h1>
+            <p>Elevate your look with a 4.9-star experience. Premium unisex grooming in Dombivli, crafted by expert stylists who listen.</p>
+
+            <div class="hero-actions">
+                <a href="#services" class="btn btn-gold"><i class="fas fa-spa"></i> Book Your Escape</a>
+                <a href="#about" class="btn btn-outline-light"><i class="fas fa-play-circle"></i> Our Story</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <strong>189+</strong> Happy Clients
+                </div>
+                <div class="stat">
+                    <strong>4.9 ★</strong> Google Rating
+                </div>
+                <div class="stat">
+                    <strong>11 PM</strong> Late Hours
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FEATURES / THE EXPERIENCE
+    ============================================================ -->
+    <section class="features section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">The Experience</span>
+                <h2 class="section-title">More Than Just a <br />Beauty Parlour</h2>
+                <p class="section-sub mx-auto">We've redefined grooming in Dombivli — a sanctuary where precision meets relaxation.</p>
+            </div>
+
+            <div class="features-grid mt-32">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-cut"></i></div>
+                    <h3>Expert Craftsmanship</h3>
+                    <p>Highly trained stylists like <strong>Satish</strong> who listen, advise, and deliver exactly what you envision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-venus-mars"></i></div>
+                    <h3>Unisex Sanctuary</h3>
+                    <p>Premium services tailored for both men and women in a space that feels inclusive and welcoming.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Clean &amp; Relaxing</h3>
+                    <p>An immaculate environment designed for calm — because self-care should feel like a retreat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    GALLERY / GLIMPSE INSIDE
+    ============================================================ -->
+    <section class="section-padding" style="background:white;padding-top:0;">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Visual Story</span>
+                <h2 class="section-title">A Glimpse Inside</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="placeholder-img"><i class="fas fa-chair"></i></div>
+                    <div class="overlay">Relaxing Ambiance</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"><i class="fas fa-scissors"></i></div>
+                    <div class="overlay">Precision Styling</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"><i class="fas fa-smile"></i></div>
+                    <div class="overlay">Happy Clients</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"><i class="fas fa-spa"></i></div>
+                    <div class="overlay">Pampering Sessions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SERVICES
+    ============================================================ -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Our Menu</span>
+                <h2 class="section-title">Services &amp; Treatments</h2>
+                <p class="section-sub mx-auto">Click a category to explore our full range of premium treatments.</p>
+            </div>
+
+            <!-- Categories -->
+            <div class="services-categories" id="serviceCategories">
+                <div class="service-category" data-category="hair">
+                    <div class="cat-icon"><i class="fas fa-cut"></i></div>
+                    <h4>Hair &amp; Styling</h4>
+                    <span class="count">6 treatments</span>
+                </div>
+                <div class="service-category" data-category="color">
+                    <div class="cat-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Color &amp; Chemistry</h4>
+                    <span class="count">4 treatments</span>
+                </div>
+                <div class="service-category" data-category="skincare">
+                    <div class="cat-icon"><i class="fas fa-gem"></i></div>
+                    <h4>Skincare &amp; Wellness</h4>
+                    <span class="count">4 treatments</span>
+                </div>
+                <div class="service-category" data-category="grooming">
+                    <div class="cat-icon"><i class="fas fa-user-tie"></i></div>
+                    <h4>Grooming (Men)</h4>
+                    <span class="count">3 treatments</span>
+                </div>
+            </div>
+
+            <!-- Detail Panel -->
+            <div class="service-detail-panel" id="servicePanel">
+                <h3 class="panel-title" id="panelTitle">Hair &amp; Styling</h3>
+                <p class="panel-sub" id="panelSub">Signature cuts, styling, and scalp treatments.</p>
+                <div class="service-list" id="serviceList">
+                    <!-- Dynamically populated -->
+                </div>
+                <div class="service-cta">
+                    <a href="#visit" class="btn btn-gold"><i class="fas fa-calendar-check"></i> Visit for Consultation</a>
+                    <a href="#visit" class="btn btn-outline"><i class="fas fa-phone-alt"></i> Call 086698 09084</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    ABOUT
+    ============================================================ -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <div class="about-text">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Crafting Confidence, <br />One Style at a Time.</h2>
+                    <p class="lead">
+                        We are more than a "Beauty Parlour." We are a team dedicated to redefining grooming standards in Dombivli. Our stylists, led by the talented <strong>Satish</strong>, are known for listening carefully and delivering looks that enhance your natural features.
+                    </p>
+                    <p style="color:#666;font-weight:300;margin-bottom:16px;">
+                        From a precision haircut to a rejuvenating de-tan treatment, every service is performed in a clean, relaxing environment. We believe great style is a form of self-care — and it should feel like a sanctuary.
+                    </p>
+                    <div class="signature">— Satish &amp; the Hair.com Team</div>
+
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <h5>Satish</h5>
+                            <span class="role">Master Stylist &amp; Beard Specialist</span>
+                        </div>
+                        <div class="team-member">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <h5>Nidhi</h5>
+                            <span class="role">Color &amp; Texture Expert</span>
+                        </div>
+                        <div class="team-member">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <h5>Rajan</h5>
+                            <span class="role">Skincare &amp; Wellness Therapist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    INSTAGRAM FEED (Home)
+    ============================================================ -->
+    <section class="instagram-feed">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Follow Our Journey</span>
+                <h2 class="section-title" style="font-size:1.8rem;">
+                    <i class="fab fa-instagram" style="color:var(--gold);margin-right:8px;"></i>
+                    @hair.com_unisex
+                </h2>
+            </div>
+            <div class="insta-grid">
+                <div class="insta-item"><i class="fab fa-instagram"></i></div>
+                <div class="insta-item"><i class="fab fa-instagram"></i></div>
+                <div class="insta-item"><i class="fab fa-instagram"></i></div>
+                <div class="insta-item"><i class="fab fa-instagram"></i></div>
+                <div class="insta-item"><i class="fab fa-instagram"></i></div>
+                <div class="insta-item"><i class="fab fa-instagram"></i></div>
+            </div>
+            <p class="text-center text-muted" style="margin-top:16px;font-size:0.9rem;">
+                <i class="fas fa-camera"></i> Real moments from our sanctuary
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    VISIT US
+    ============================================================ -->
+    <section class="section-padding" id="visit">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Find Us</span>
+                <h2 class="section-title">Visit Our Sanctuary</h2>
+                <p class="section-sub mx-auto">We're conveniently located in Dombivli. Come experience the difference.</p>
+            </div>
+
+            <div class="visit-grid">
+                <!-- Left: Map & Address -->
+                <div class="visit-card">
+                    <h3><i class="fas fa-map-pin" style="color:var(--gold);margin-right:8px;"></i> Location &amp; Directions</h3>
+                    <div class="detail">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <strong>Hair.com Unisex Salon</strong><br />
+                            Chandresh Villa D, Rd Dombivli, 15,<br />
+                            Lodha Casa Rio Gold Rd, Nilaje,<br />
+                            Maharashtra 421204
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone"></i>
+                        <div><a href="tel:08669809084" style="color:var(--gold);font-weight:600;">086698 09084</a></div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Open</strong> · Closes 11:00 PM</div>
+                    </div>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map" style="margin-right:8px;color:var(--gold);"></i> Google Maps — 536G+W2 Nilaje
+                    </div>
+                    <div class="visit-cta-group">
+                        <a href="tel:08669809084" class="btn btn-gold"><i class="fas fa-phone-alt"></i> Call Now to Book</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-directions"></i> Get Directions</a>
+                    </div>
+                </div>
+
+                <!-- Right: Contact & Hours + Instagram -->
+                <div class="visit-card">
+                    <h3><i class="fas fa-store" style="color:var(--gold);margin-right:8px;"></i> Visit &amp; Connect</h3>
+                    <p style="color:#666;font-weight:300;margin-bottom:16px;">
+                        Walk in for a consultation or book ahead. Our team is ready to welcome you.
+                    </p>
+                    <div class="detail">
+                        <i class="fas fa-hashtag"></i>
+                        <div><strong>Social:</strong> <a href="#" style="color:var(--gold);">@hair.com_unisex</a></div>
+                    </div>
+                    <div style="margin-top:24px;">
+                        <span style="font-weight:500;display:block;margin-bottom:8px;">Follow our latest styles:</span>
+                        <div class="insta-grid" style="grid-template-columns:repeat(3,1fr);gap:8px;margin-top:0;">
+                            <div class="insta-item" style="aspect-ratio:1/1;background:var(--greige);"><i class="fab fa-instagram" style="font-size:1.2rem;"></i></div>
+                            <div class="insta-item" style="aspect-ratio:1/1;background:var(--greige);"><i class="fab fa-instagram" style="font-size:1.2rem;"></i></div>
+                            <div class="insta-item" style="aspect-ratio:1/1;background:var(--greige);"><i class="fab fa-instagram" style="font-size:1.2rem;"></i></div>
+                        </div>
+                    </div>
+                    <div style="margin-top:20px;padding-top:20px;border-top:1px solid #eee;">
+                        <p style="font-size:0.9rem;color:#999;">
+                            <i class="fas fa-star" style="color:var(--gold);"></i>
+                            <i class="fas fa-star" style="color:var(--gold);"></i>
+                            <i class="fas fa-star" style="color:var(--gold);"></i>
+                            <i class="fas fa-star" style="color:var(--gold);"></i>
+                            <i class="fas fa-star" style="color:var(--gold);"></i>
+                            &nbsp; 4.9 ★ from 189 reviews
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div>
+                <div class="brand">hair.<span>com</span></div>
+                <p style="max-width:300px;">
+                    Premium unisex grooming in Dombivli. A sanctuary for style and self-care.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#visit">Visit Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:08669809084">086698 09084</a></li>
+                    <li>Chandresh Villa D,<br />Lodha Casa Rio Gold Rd,<br />Nilaje, MH 421204</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Hours</h5>
+                <ul>
+                    <li>Mon–Sun: 9:00 AM – 11:00 PM</li>
+                    <li style="margin-top:8px;color:rgba(255,255,255,0.4);font-size:0.85rem;">
+                        <i class="fas fa-clock" style="color:var(--gold);"></i> Open now
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Hair.com Unisex Salon. Crafted with care.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ---- NAVBAR SCROLL ----
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                lastScroll = currentScroll;
+            });
+
+            // ---- HAMBURGER MENU ----
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('open');
+            });
+
+            // Close menu on link click (mobile)
+            navLinks.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('open');
+                });
+            });
+
+            // ---- SERVICES DATA ----
+            const servicesData = {
+                hair: {
+                    title: 'Hair & Styling',
+                    subtitle: 'Signature cuts, styling, and scalp treatments.',
+                    items: [
+                        'Haircut (Men / Women)',
+                        'Long-Layer Haircut',
+                        'Hair Styling',
+                        'Hair Spa',
+                        'Deep Conditioning',
+                        'Beard Trim'
+                    ]
+                },
+                color: {
+                    title: 'Color & Chemistry',
+                    subtitle: 'Transform your look with expert color and repair.',
+                    items: [
+                        'Hair Color',
+                        'De-Tan Treatment',
+                        'Botox Hair Treatment',
+                        'Smoothing / Olive Oil Massage'
+                    ]
+                },
+                skincare: {
+                    title: 'Skincare & Wellness',
+                    subtitle: 'Rejuvenating facial and body treatments.',
+                    items: [
+                        'Facial Massage',
+                        'De-Tan (Face / Body)',
+                        'Clean-up',
+                        'Under-Eye Treatment'
+                    ]
+                },
+                grooming: {
+                    title: 'Grooming (Men)',
+                    subtitle: 'Sharp, polished, and tailored for the modern man.',
+                    items: [
+                        'Beard Shaping',
+                        'Mustache Grooming',
+                        'Haircut + Beard Combo'
+                    ]
+                }
+            };
+
+            const panel = document.getElementById('servicePanel');
+            const panelTitle = document.getElementById('panelTitle');
+            const panelSub = document.getElementById('panelSub');
+            const serviceList = document.getElementById('serviceList');
+
+            // Click handler for categories
+            document.querySelectorAll('.service-category').forEach(function(card) {
+                card.addEventListener('click', function() {
+                    const key = this.dataset.category;
+                    const data = servicesData[key];
+                    if (!data) return;
+
+                    // Populate panel
+                    panelTitle.textContent = data.title;
+                    panelSub.textContent = data.subtitle;
+                    serviceList.innerHTML = '';
+                    data.items.forEach(function(item) {
+                        const div = document.createElement('div');
+                        div.className = 'service-item';
+                        div.innerHTML = '<i class="fas fa-circle"></i> ' + item;
+                        serviceList.appendChild(div);
+                    });
+
+                    // Show panel with animation
+                    panel.classList.add('active');
+                    panel.style.display = 'block';
+
+                    // Scroll to panel smoothly
+                    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+
+            // Auto-open the first category on load
+            window.addEventListener('DOMContentLoaded', function() {
+                const firstCat = document.querySelector('.service-category');
+                if (firstCat) {
+                    firstCat.click();
+                }
+            });
+
+            // ---- SMOOTH ANCHOR SCROLL ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // ---- 3D PARALLAX (subtle mouse movement on floating elements) ----
+            const floatingEls = document.querySelectorAll('.floating-3d');
+            document.addEventListener('mousemove', function(e) {
+                const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                floatingEls.forEach(function(el, index) {
+                    const speed = 0.02 + (index * 0.01);
+                    el.style.transform = 'translate(' + (x * speed) + 'px, ' + (y * speed) + 'px)';
+                });
+            });
+
+            // ---- INSTAGRAM PLACEHOLDER CLICK ----
+            document.querySelectorAll('.insta-item').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    window.open('https://www.instagram.com/hair.com_unisex', '_blank');
+                });
+            });
+
+            // ---- CONSOLE BRANDING ----
+            console.log('%c✧ Hair.com Unisex Salon ✧', 'font-size:24px; font-weight:bold; color:#C9A96E;');
+            console.log('%cPremium Grooming Sanctuary — Dombivli', 'font-size:14px; color:#888;');
+
+        })();
+    </script>
+
+</body>
+</html>
